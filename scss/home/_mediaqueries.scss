@@ -1,0 +1,52 @@
+@use '../partials/tools' as *;
+@use '../partials/assembler/' as *;
+
+// ----------------------
+/* mediaqueries */
+// ----------------------
+
+// @include mQdefault($width-Max) {
+//     :root {
+//         --font-size: #{$font-size-100};
+//         --heading-L: #{$heading__L--Max};
+//     }
+
+// }
+
+// @include mQmax__min-width {
+//     header {
+//         @include container(em(540, 16));
+//         margin-bottom: em(64, 16);
+//     }
+//     .container {
+//         @include container(em(1440, 16));
+//     }
+
+//     .grid {
+//         @include flex($align: center, $justify: center);
+//         .card {
+//             max-width: em(350, 16);
+//             min-height: em(250, 16);
+//         }
+
+//         .middle {
+//             padding-inline: em(30, 16);
+
+//             .card {
+//                 img {
+//                     max-width: em(64, 16);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @include mQmni__max-width {
+//     .container {
+//         padding-block: em(30, 14.4) em(30, 14.4);
+//         padding-inline: em(0, 14.4);
+//     }
+//     header {
+//         padding-inline: em(10, 14.4);
+//     }
+// }

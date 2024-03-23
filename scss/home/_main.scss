@@ -1,0 +1,22 @@
+@use '../partials/tools' as *;
+@use '../partials/assembler/' as *;
+
+// --------------------
+/* --- home main --- */
+// --------------------
+
+.home {
+    font-optical-sizing: auto;
+    background-color: $clr-bg-body;
+    // height: 100dvh;
+    // @include flexCenter;
+    font-family: $font-family-Poppins;
+}
+
+.container {
+    @include container(em(375, 14.4));
+    min-width: em(200, 14.4);
+    padding-block: em(85, 14.4) em(78, 14.4);
+    padding-inline: em(30, 14.4);
+}
+
