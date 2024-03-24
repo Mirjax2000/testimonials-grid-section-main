@@ -332,12 +332,6 @@ img {
   font-optical-sizing: auto;
   background-color: #ecf2f8;
   font-family: "Barlow_semi_condensed", sans-serif;
-}
-
-.container {
-  max-width: 26.0416666667em;
-  margin-inline: auto;
-  min-width: 13.8888888889em;
   min-height: 100svh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,6 +342,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.container {
+  max-width: 26.0416666667em;
+  margin-inline: auto;
+  min-width: 13.8888888889em;
   padding: 1.6666666667em;
 }
 
@@ -359,20 +359,39 @@ img {
   margin-bottom: 1.6666666667em;
 }
 
-.card.clifford {
+.clifford {
   background-color: #7541c8;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
-.card.walters {
+
+.walters {
   background-color: #48556a;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
-.card.harmon {
+
+.harmon {
   background-color: #ffffff;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
-.card.abrams {
+
+.abrams {
   background-color: #19202d;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
-.card.whittle {
+
+.whittle {
   background-color: #ffffff;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }
 
 .card .card__header {
@@ -476,77 +495,31 @@ img {
     max-width: 3.125em;
   }
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 650px) {
   .container {
-    max-width: 100em;
+    max-width: 60.625em;
     margin-inline: auto;
-  }
-  .primary__flex {
-    max-width: 77.0833333333em;
-    margin-inline: auto;
-  }
-  .top__grid,
-  .bottom__grid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 2.0833333333em;
-    gap: clamp(0.714rem, 6.667vw - 2.619rem, 2.143rem);
+    gap: 3.636%;
   }
-  .card {
-    margin-bottom: 0;
+  .container .clifford,
+  .container .abrams {
+    max-width: 65.4545454545%;
   }
-  .card.harmon, .card.abrams, .card.whittle {
-    padding-bottom: 1.8055555556em;
+  .container .walters,
+  .container .harmon {
+    max-width: 30.90909%;
   }
-  .card.clifford .review__header {
-    margin-bottom: 0.8em;
-  }
-  .card.clifford::before {
-    right: 5.5555555556em;
-  }
-  .card.whittle .review__header {
-    margin-bottom: 1.2em;
-  }
-}
-@media only screen and (min-width: 850px) {
-  .primary__flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: clamp(0.714rem, 3.39vw - 1.344rem, 2.143rem);
-  }
-  .primary__flex .right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 17.7083333333em;
-  }
-  .primary__flex .top__grid,
-  .primary__flex .bottom__grid {
-    gap: 3.6%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .primary__flex .secondary__flex .harmon,
-  .primary__flex .secondary__flex .walters {
-    -ms-flex-preferred-size: 30.9%;
-        flex-basis: 30.9%;
-  }
-  .primary__flex .secondary__flex .abrams,
-  .primary__flex .secondary__flex .clifford {
-    -ms-flex-preferred-size: 65.4%;
-        flex-basis: 65.4%;
-  }
-  .primary__flex .bottom__grid {
-    margin-bottom: 0;
+  .container .whittle {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 /*# sourceMappingURL=home.css.map */

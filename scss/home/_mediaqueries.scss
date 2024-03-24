@@ -23,77 +23,29 @@
     }
 }
 
-@include mQdefault__min-width(700px) {
+@include mQdefault__min-width(650px) {
     .container {
-        @include container(em(1440, 14.4));
-    }
+        @include container(em(873, 14.4));
+        // background-color: gray;
 
-    .primary__flex {
-        @include container(em(1110, 14.4));
-    }
-
-    .top__grid,
-    .bottom__grid {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: em(30, 14.4);
-        gap: clamp(0.714rem, 6.667vw - 2.619rem, 2.143rem);
-    }
+        gap: 3.636%;
 
-    .card {
-        margin-bottom: 0;
-        &.harmon,
-        &.abrams,
-        &.whittle {
-            padding-bottom: em(26, 14.4);
+        .clifford,
+        .abrams {
+            max-width: 65.4545454545%;
         }
-        &.clifford {
-            .review__header {
-                margin-bottom: em(16, 20);
-            }
-
-            &::before {
-                right: em(80, 14.4);
-            }
+        .walters,
+        .harmon {
+            max-width: 30.90909%;
         }
-        &.whittle {
-            .review__header {
-                margin-bottom: em(24, 20);
-            }
+        .whittle {
+            flex-basis: 100%;
         }
     }
 }
 
-@include mQdefault__min-width(850px) {
-    .primary__flex {
-        display: flex;
-        justify-content: center;
-        gap: clamp(0.714rem, 3.39vw - 1.344rem, 2.143rem);
-
-        .right {
-            display: flex;
-            max-width: em(255, 14.4);
-        }
-
-        .top__grid,
-        .bottom__grid {
-            gap: 3.6%;
-            justify-content: center;
-        }
-
-        .secondary__flex {
-            .harmon,
-            .walters {
-                flex-basis: 30.9%;
-            }
-            .abrams,
-            .clifford {
-                flex-basis: 65.4%;
-            }
-        }
-
-        .bottom__grid {
-            margin-bottom: 0;
-        }
-    }
-}
+// @include mQdefault__min-width(850px) {
+// }

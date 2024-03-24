@@ -8,18 +8,16 @@
 .home {
     font-optical-sizing: auto;
     background-color: $clr-bg-body;
-    // height: 100dvh;
-    // @include flexCenter;
     font-family: $font-family-Barlow-semiCon;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
     @include container(em(375, 14.4));
     min-width: em(200, 14.4);
-    min-height: 100svh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: em(24, 14.4);
 }
 
@@ -31,11 +29,10 @@
 }
 
 // card backround cyklus
-.card {
-    @each $name, $color in $cards__color {
-        &.#{$name} {
-            background-color: $color;
-        }
+@each $name, $color in $cards__color {
+    .#{$name} {
+        background-color: $color;
+        order: index(map-keys($cards__color), $name);
     }
 }
 
@@ -81,9 +78,11 @@
 
     &.clifford {
         color: $clr10;
+
         .review__text {
             color: $clr14;
         }
+
         .review__header {
             margin-bottom: em(40, 20);
         }
@@ -94,7 +93,7 @@
 
         position: relative;
         z-index: 100;
-        
+
         &::before {
             position: absolute;
             content: '';
