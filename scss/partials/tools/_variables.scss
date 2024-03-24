@@ -13,6 +13,7 @@ $clr13: #19202d;
 $clr14: #cfcfcf;
 $clr15: #ecf2f8;
 $clr16: #a775f1;
+$clr17: #48556a3f;
 
 $clr99: #808080;
 // -----------------------
@@ -22,16 +23,21 @@ $clr99: #808080;
 $clr-txt-H1: $clr11;
 
 // text H2
-$clr-txt-H2: $clr11;
+$clr-txt-H2: $clr10;
+// text H2--inverted
+$clr-txt-H2--inverted: $clr12;
 
 // text H3
-$clr-txt-H3: $clr11;
+$clr-txt-H3: $clr10;
+// text H3--inverted
+$clr-txt-H3--inverted: $clr12;
 
-// Header-par
-$clr-txt-header-par: $clr11;
-
-// card-par
-$clr-txt-card-par: $clr11;
+// cifford-par
+$clr-txt-clifford: $clr14;
+// walters-abrams-par
+$clr-txt-walters: $clr10;
+// harmon and whittle-par
+$clr-txt-harmon-whittle: $clr12;
 
 // price-old
 $clr-txt-price--old: $clr12;
@@ -88,7 +94,7 @@ $clr-br-list: $clr13;
 // ----------------------
 
 // shadow color
-$clr-shdw: $clr18;
+$clr-shdw: $clr17;
 // ----------------------
 
 // transition
@@ -106,23 +112,24 @@ $bp-Mni: 250px;
 $font-size-110: 110%;
 $font-size-100: 100%;
 $font-size-90: 90%;
+$font-size-80: 80%;
 // --------------------------------
 
-// H1
-$H1--Max: rem(36, 0); //32
-$H1--Mid: rem(24, 10); //24
+// names
+$names--Max: rem(13, 0); //32
+$names--Mid: rem(13, 10); //13
 
-// H2
-$H2--Max: rem(36, 0); //36
-$H2--Mid: rem(24, 10); //20
+// graduate
+$graduate--Max: rem(11, 0); //36
+$graduate--Mid: rem(11, 10); //1
 
-// H3
-$H3--Max: rem(20, 0); //20
-$H3--Mid: rem(20, 10); //20
+// review header
+$review__header--Max: rem(20, 0); //20
+$review__header--Mid: rem(20, 10); //20
 
-// Header-par
-$header-par--Max: rem(15, 0); //15
-$header-par--Mid: rem(15, 10); //15
+// review par
+$review__par--Max: rem(13, 0); //15
+$review__par--Mid: rem(13, 10); //13
 
 // Card-par
 $card-par--Max: rem(13, 0); //13
@@ -143,15 +150,16 @@ $footmni: 0.825rem; //13.2px
 // $pages: home, gallery, blog, contact, buttons;
 
 // icon colors
-$cards-color: (
-    'supervisor': $clr12,
-    'calculator': $clr13,
-    'teamBuilder': $clr14,
-    'karma': $clr16,
+$cards__color: (
+    'clifford': $clr11,
+    'walters': $clr12,
+    'harmon': $clr10,
+    'abrams': $clr13,
+    'whittle': $clr10,
 );
 
-$btns-color: (
-    'GetStarted': $clr12,
+$btns__color: (
+    'GetStarted': $clr11,
     'ContinueReading': $clr12,
     'FindOutMore': $clr12,
     'LearnMoreMain': $clr11,

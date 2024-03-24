@@ -5,48 +5,80 @@
 /* mediaqueries */
 // ----------------------
 
-// @include mQdefault($width-Max) {
-//     :root {
-//         --font-size: #{$font-size-100};
-//         --heading-L: #{$heading__L--Max};
-//     }
+@include mQdefault__max-width(300px) {
+    :root {
+        --font-size: #{$font-size-80};
+    }
 
-// }
+    .container {
+        padding-block: em(30, 14.4) em(30, 14.4);
+        padding-inline: em(0, 14.4);
+    }
+    .card {
+        border-radius: 0;
+        padding: em(26, 12.8) em(15, 12.8) em(26, 12.8) em(15, 12.8);
+        img {
+            max-width: em(40, 12.8);
+        }
+    }
+}
 
-// @include mQmax__min-width {
-//     header {
-//         @include container(em(540, 16));
-//         margin-bottom: em(64, 16);
-//     }
-//     .container {
-//         @include container(em(1440, 16));
-//     }
+@include mQdefault__min-width(700px) {
+    .container {
+        @include container(em(1440, 14.4));
+    }
 
-//     .grid {
-//         @include flex($align: center, $justify: center);
-//         .card {
-//             max-width: em(350, 16);
-//             min-height: em(250, 16);
-//         }
+    .primary__flex {
+        @include container(em(1110, 14.4));
+    }
 
-//         .middle {
-//             padding-inline: em(30, 16);
+    .top__grid,
+    .bottom__grid {
+        display: flex;
+        margin-bottom: em(30, 14.4);
+        gap: clamp(0.714rem, 6.667vw - 2.619rem, 2.143rem);
+    }
 
-//             .card {
-//                 img {
-//                     max-width: em(64, 16);
-//                 }
-//             }
-//         }
-//     }
-// }
+    .card {
+        margin-bottom: 0;
+        &.harmon,
+        &.abrams,
+        &.whittle {
+            padding-bottom: em(26, 14.4);
+        }
+        &.clifford {
+            .review__header {
+                margin-bottom: em(16, 20);
+            }
+        }
+        &.whittle {
+            .review__header {
+                margin-bottom: em(24, 20);
+            }
+        }
+    }
+}
 
-// @include mQmni__max-width {
-//     .container {
-//         padding-block: em(30, 14.4) em(30, 14.4);
-//         padding-inline: em(0, 14.4);
-//     }
-//     header {
-//         padding-inline: em(10, 14.4);
-//     }
-// }
+@include mQdefault__min-width(850px) {
+    .primary__flex {
+        display: flex;
+        justify-content: center;
+        gap: clamp(0.714rem, 3.39vw - 1.344rem, 2.143rem);
+        gap: em(30, 14.4);
+
+        .right {
+            display: flex;
+            max-width: em(255, 14.4);
+        }
+
+        .top__grid,
+        .bottom__grid {
+            gap: clamp(0.714rem, 3.39vw - 1.344rem, 2.143rem);
+            gap: em(30, 14.4);
+        }
+
+        .bottom__grid {
+            margin-bottom: 0;
+        }
+    }
+}

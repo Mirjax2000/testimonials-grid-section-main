@@ -92,46 +92,11 @@
 }
 
 // mediaqueris max-width
-@mixin mQmax__max-width {
-    @media only screen and (max-width: $mQmax) {
-        :root {
-        }
 
-        @content;
-    }
-}
-
-@mixin mQmid__max-width {
-    @media only screen and (max-width: $mQmid) {
-        :root {
-        }
-
-        @content;
-    }
-}
-
-@mixin mQmin__max-width {
-    @media only screen and (max-width: $mQmin) {
-        :root {
-        }
-
-        @content;
-    }
-}
-
-@mixin mQmni__max-width {
-    @media only screen and (max-width: $bp-Mni) {
-        :root {
-        }
-
-        @content;
-    }
-}
 
 @mixin mQdefault__max-width($width) {
     @media only screen and (max-width: $width) {
-        :root {
-        }
+        
 
         @content;
     }
@@ -139,53 +104,11 @@
 // ________________________________________
 
 // mediaqueris min-width
-@mixin mQmax__min-width {
-    @media only screen and (min-width: $bp-Max) {
-        :root {
-            --font-size: #{$font-size-100};
-            --H1: #{$H1--Max};
-            --H2: #{$H2--Max};
-            --H3: #{$H3--Max};
-            --header-par: #{$header-par--Max};
-            --card-par: #{$card-par--Max};
-        }
 
-        @content;
-    }
-}
-
-@mixin mQmid__min-width {
-    @media only screen and (min-width: $mQmid) {
-        :root {
-        }
-
-        @content;
-    }
-}
-
-@mixin mQmin__min-width {
-    @media only screen and (min-width: $mQmin) {
-        :root {
-        }
-
-        @content;
-    }
-}
-
-@mixin mQmni-min-width {
-    @media only screen and (min-width: $width-Mni) {
-        :root {
-        }
-
-        @content;
-    }
-}
 
 @mixin mQdefault__min-width($width) {
     @media only screen and (min-width: $width) {
-        :root {
-        }
-
+        
         @content;
     }
 }

@@ -10,13 +10,106 @@
     background-color: $clr-bg-body;
     // height: 100dvh;
     // @include flexCenter;
-    font-family: $font-family-Poppins;
+    font-family: $font-family-Barlow-semiCon;
 }
 
 .container {
     @include container(em(375, 14.4));
     min-width: em(200, 14.4);
-    padding-block: em(85, 14.4) em(78, 14.4);
-    padding-inline: em(30, 14.4);
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: em(24, 14.4);
 }
 
+.card {
+    box-shadow: em(40, 14.4) em(60, 14.4) em(50, 14.4) em(-47, 14.4) $clr-shdw;
+    border-radius: em($br-card--mobile, 14.4);
+    padding: em(26, 14.4) em(32, 14.4) em(32, 14.4);
+    margin-bottom: em(24, 14.4);
+}
+
+// card backround cyklus
+.card {
+    @each $name, $color in $cards__color {
+        &.#{$name} {
+            background-color: $color;
+        }
+    }
+}
+
+.card {
+    .card__header {
+        @include flex($gap: em(17, 14.4), $justify: flex-start, $align: center);
+    }
+
+    img {
+        max-width: em(28, 14.4);
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+    }
+
+    h2 {
+        font-size: var(--names); //13
+        line-height: em(13, 13);
+        @extend %weight-500;
+        margin-bottom: em(4, 13);
+    }
+
+    h3 {
+        font-size: var(--graduate); //11
+        line-height: em(11, 11);
+        @extend %weight-500;
+        opacity: 0.5;
+    }
+
+    .review__header {
+        font-size: var(--review__header); //20
+        line-height: em(24, 20);
+        @extend %weight-600;
+        margin-top: em(18, 20);
+        margin-bottom: em(16, 20);
+    }
+
+    .review__text {
+        font-size: var(--review__par); //13
+        line-height: em(18, 13);
+        @extend %weight-500;
+        opacity: 0.7;
+    }
+
+    &.clifford {
+        color: $clr10;
+        .review__text {
+            color: $clr14;
+        }
+        .review__header {
+            margin-bottom: em(40, 20);
+        }
+
+        img {
+            border: 2px solid $clr16;
+        }
+    }
+
+    &.walters {
+        color: $clr10;
+    }
+
+    &.harmon,
+    &.whittle {
+        color: $clr12;
+    }
+
+    &.abrams {
+        color: $clr10;
+
+        .review__header {
+            color: $clr15;
+        }
+        img {
+            border: 2px solid $clr16;
+        }
+    }
+}

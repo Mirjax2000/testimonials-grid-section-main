@@ -6,9 +6,8 @@
 
 :root {
     --font-size: #{$font-size-90};
-    --H1: #{$H1--Mid};
-    --H2: #{$H2--Mid};
-    --H3: #{$H3--Mid};
-    --header-par: #{$header-par--Mid};
-    --card-par: #{$card-par--Mid};
+    --names: #{$names--Mid};
+    --graduate: #{$graduate--Mid};
+    --review__header: #{$review__header--Mid};
+    --review__par: #{$review__par--Mid};
 }
