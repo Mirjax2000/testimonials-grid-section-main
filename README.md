@@ -1,6 +1,6 @@
 # Frontend Mentor - Product card
 
-This is a solution to the [Four-card-feature](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Testimonial-grid](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -53,6 +53,8 @@ i saved lots of kilobytes. And it has some role in SEO evaluation.
 -   Mobile-first workflow
 
 ### What I learned
+
+Precise control of flexbox
 
 <p>"Flex box"</p>
 
