@@ -51,6 +51,10 @@
             .review__header {
                 margin-bottom: em(16, 20);
             }
+
+            &::before {
+                right: em(80, 14.4);
+            }
         }
         &.whittle {
             .review__header {
@@ -78,10 +82,12 @@
         }
 
         .secondary__flex {
-            .harmon,.walters {
+            .harmon,
+            .walters {
                 flex-basis: 30.9%;
             }
-            .abrams,.clifford {
+            .abrams,
+            .clifford {
                 flex-basis: 65.4%;
             }
         }
