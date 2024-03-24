@@ -361,37 +361,22 @@ img {
 
 .clifford {
   background-color: #7541c8;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
 }
 
 .walters {
   background-color: #48556a;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
 }
 
 .harmon {
   background-color: #ffffff;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
 }
 
 .abrams {
   background-color: #19202d;
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
 }
 
 .whittle {
   background-color: #ffffff;
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
 }
 
 .card .card__header {
@@ -509,15 +494,15 @@ img {
             justify-content: space-between;
     gap: 3.636%;
   }
-  .container .clifford,
-  .container .abrams {
+  .container [data-order="1"],
+  .container [data-order="4"] {
     max-width: 65.4545454545%;
   }
-  .container .walters,
-  .container .harmon {
+  .container [data-order="2"],
+  .container [data-order="3"] {
     max-width: 30.90909%;
   }
-  .container .whittle {
+  .container [data-order="5"] {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }

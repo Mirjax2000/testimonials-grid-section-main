@@ -32,7 +32,6 @@
 @each $name, $color in $cards__color {
     .#{$name} {
         background-color: $color;
-        order: index(map-keys($cards__color), $name);
     }
 }
 
