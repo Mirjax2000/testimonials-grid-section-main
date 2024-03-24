@@ -478,6 +478,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 2.0833333333em;
     gap: clamp(0.714rem, 6.667vw - 2.619rem, 2.143rem);
   }
@@ -503,7 +506,6 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
     gap: clamp(0.714rem, 3.39vw - 1.344rem, 2.143rem);
-    gap: 2.0833333333em;
   }
   .primary__flex .right {
     display: -webkit-box;
@@ -513,8 +515,18 @@ img {
   }
   .primary__flex .top__grid,
   .primary__flex .bottom__grid {
-    gap: clamp(0.714rem, 3.39vw - 1.344rem, 2.143rem);
-    gap: 2.0833333333em;
+    gap: 3.6%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .primary__flex .secondary__flex .harmon, .primary__flex .secondary__flex .walters {
+    -ms-flex-preferred-size: 30.9%;
+        flex-basis: 30.9%;
+  }
+  .primary__flex .secondary__flex .abrams, .primary__flex .secondary__flex .clifford {
+    -ms-flex-preferred-size: 65.4%;
+        flex-basis: 65.4%;
   }
   .primary__flex .bottom__grid {
     margin-bottom: 0;
