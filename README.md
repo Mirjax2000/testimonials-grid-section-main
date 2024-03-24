@@ -16,9 +16,8 @@ This is a solution to the [Testimonial-grid](https://www.frontendmentor.io/chall
 
 Deep dive into B.E.M.
 Mobile first aproach
-trying to save some bandwidth and made smaller picture for mobile resolution, and used "Art direction" and "Resolution switching" technique for retina displays.
-also i compress jpeg to webp.
-i saved lots of kilobytes. And it has some role in SEO evaluation.
+Flexbox.
+Trying to undestand flexbox-container and its flexbox-items
 
 ### Screenshot
 
