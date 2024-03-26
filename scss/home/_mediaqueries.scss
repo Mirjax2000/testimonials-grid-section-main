@@ -46,6 +46,7 @@
         @include container(em(1158, 14.4));
 
         grid-template-columns: repeat(4, 1fr);
+
         grid-template-rows: repeat(2, 1fr);
 
         .whittle {
