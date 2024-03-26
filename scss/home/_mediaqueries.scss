@@ -26,27 +26,32 @@
 @include mQdefault__min-width(650px) {
     .container {
         @include container(em(873, 14.4));
-        // background-color: gray;
 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 3.636%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(0.357rem, 11.211vw - 4.848rem, 2.143rem);
 
-        [data-order='1'],
-        [data-order='4'] {
-            max-width: 65.4545454545%;
+        .clifford,
+        .abrams {
+            grid-column: span 2;
         }
 
-        [data-order='2'],
-        [data-order='3'] {
-            max-width: 30.90909%;
-        }
-        [data-order='5'] {
-            flex-basis: 100%;
+        .whittle {
+            grid-column: span 3;
         }
     }
 }
 
-@include mQdefault__min-width(850px) {
+@include mQdefault__min-width(1024px) {
+    .container {
+        @include container(em(1158, 14.4));
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        .whittle {
+            grid-column: 4/5;
+            grid-row: 1/-1;
+            order: 3;
+        }
+    }
 }

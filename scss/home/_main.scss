@@ -19,13 +19,17 @@
     @include container(em(375, 14.4));
     min-width: em(200, 14.4);
     padding: em(24, 14.4);
+    display: grid;
+    row-gap: em(24, 14.4);
 }
 
 .card {
     box-shadow: em(40, 14.4) em(60, 14.4) em(50, 14.4) em(-47, 14.4) $clr-shdw;
     border-radius: em($br-card--mobile, 14.4);
     padding: em(26, 14.4) em(32, 14.4) em(32, 14.4);
-    margin-bottom: em(24, 14.4);
+}
+.whittle {
+    margin-bottom: 0;
 }
 
 // card backround cyklus
